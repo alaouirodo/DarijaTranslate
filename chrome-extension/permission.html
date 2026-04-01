@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Microphone Permission</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #f8f9fa;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .icon { font-size: 40px; margin-bottom: 12px; }
+        h2 { margin: 0 0 8px; color: #111827; font-size: 16px; }
+        p { margin: 0 0 16px; color: #6B7280; font-size: 13px; text-align: center; line-height: 1.5; }
+        .steps { background: #fff; border: 1px solid #E5E7EB; border-radius: 8px; padding: 12px 16px; width: 100%; max-width: 340px; }
+        .step { font-size: 13px; color: #374151; margin-bottom: 6px; }
+        .step:last-child { margin-bottom: 0; }
+        .step span { font-weight: 600; color: #2563EB; }
+    </style>
+</head>
+<body>
+    <div class="icon">🎤</div>
+    <h2>Microphone Access Needed</h2>
+    <p>Chrome blocked the microphone for this extension.<br>Follow these steps to allow it:</p>
+    <div class="steps">
+        <div class="step">1. Go to <span>chrome://settings/content/microphone</span></div>
+        <div class="step">2. Make sure it is set to <span>Ask before accessing</span></div>
+        <div class="step">3. Remove DarijaTranslate from the <span>Blocked</span> list if present</div>
+        <div class="step">4. Reload the extension and try again</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+target/
+*.class
+*.war
+*.jar
+*.log
+.settings/
+.classpath
+.project
+.DS_Store
+*.json
+!chrome-extension/manifest.json
+node_modules/
+.idea/
+*.iml

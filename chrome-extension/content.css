@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;500;600&display=swap');
+
+#panel {
+    position: fixed;
+    width: 300px;
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+    z-index: 2147483647;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform-origin: top left;
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+#panel.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #F3F4F6;
+    padding-bottom: 8px;
+}
+
+.lang-tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6B7280;
+    text-transform: uppercase;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+#closeBtn {
+    color: #9CA3AF;
+    padding: 2px 6px;
+}
+
+#closeBtn:hover {
+    background: #F3F4F6;
+    color: #111827;
+}
+
+.content {
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 40px;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.actions button {
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    padding: 4px 10px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.actions button:hover {
+    background: #F3F4F6;
+    border-color: #D1D5DB;
+}
+
+@media (prefers-color-scheme: dark) {
+    #panel {
+        background: #111827;
+        border-color: #374151;
+        color: #F9FAFB;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .header {
+        border-bottom-color: #1F2937;
+    }
+
+    .content {
+        color: #F9FAFB;
+    }
+
+    .actions button {
+        background: #1F2937;
+        border-color: #374151;
+        color: #D1D5DB;
+    }
+
+    .actions button:hover {
+        background: #374151;
+    }
+
+    #closeBtn:hover {
+        background: #374151;
+        color: #F9FAFB;
+    }
+}
